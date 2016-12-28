@@ -107,11 +107,11 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Developed by Gnomeus";
             // 
-            // EjemplosEspañol
+            // TPLBasics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 209);
+            this.ClientSize = new System.Drawing.Size(262, 236);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_Example6);
             this.Controls.Add(this.Btn_Example5);
@@ -119,7 +119,7 @@
             this.Controls.Add(this.Btn_Example3);
             this.Controls.Add(this.Btn_Example2);
             this.Controls.Add(this.Btn_Example1);
-            this.Name = "EjemplosEspañol";
+            this.Name = "TPLBasics";
             this.Text = "TPL Basic Examples";
             this.ResumeLayout(false);
             this.PerformLayout();

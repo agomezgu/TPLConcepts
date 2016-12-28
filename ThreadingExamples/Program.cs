@@ -16,7 +16,7 @@ namespace ThreadingExamples
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TPLBasics());
+            Application.Run(new FIFOExample());
         }
     }
 }

@@ -45,6 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FIFO.cs" />
+    <Compile Include="FIFOExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIFOExample.Designer.cs">
+      <DependentUpon>FIFOExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="TPLBasics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +59,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FIFOExample.resx">
+      <DependentUpon>FIFOExample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TPLBasics.resx">
       <DependentUpon>TPLBasics.cs</DependentUpon>
     </EmbeddedResource>
