@@ -35,11 +35,12 @@
             this.Btn_Example5 = new System.Windows.Forms.Button();
             this.Btn_Example6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.LinkLbl_SeeDocumentation = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // Btn_Example1
             // 
-            this.Btn_Example1.Location = new System.Drawing.Point(34, 22);
+            this.Btn_Example1.Location = new System.Drawing.Point(63, 22);
             this.Btn_Example1.Name = "Btn_Example1";
             this.Btn_Example1.Size = new System.Drawing.Size(75, 23);
             this.Btn_Example1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             // Btn_Example2
             // 
-            this.Btn_Example2.Location = new System.Drawing.Point(142, 22);
+            this.Btn_Example2.Location = new System.Drawing.Point(171, 22);
             this.Btn_Example2.Name = "Btn_Example2";
             this.Btn_Example2.Size = new System.Drawing.Size(75, 23);
             this.Btn_Example2.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // Btn_Example3
             // 
-            this.Btn_Example3.Location = new System.Drawing.Point(34, 73);
+            this.Btn_Example3.Location = new System.Drawing.Point(63, 73);
             this.Btn_Example3.Name = "Btn_Example3";
             this.Btn_Example3.Size = new System.Drawing.Size(75, 23);
             this.Btn_Example3.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             // Btn_Example4
             // 
-            this.Btn_Example4.Location = new System.Drawing.Point(142, 73);
+            this.Btn_Example4.Location = new System.Drawing.Point(171, 73);
             this.Btn_Example4.Name = "Btn_Example4";
             this.Btn_Example4.Size = new System.Drawing.Size(75, 23);
             this.Btn_Example4.TabIndex = 3;
@@ -79,7 +80,7 @@
             // 
             // Btn_Example5
             // 
-            this.Btn_Example5.Location = new System.Drawing.Point(34, 127);
+            this.Btn_Example5.Location = new System.Drawing.Point(63, 127);
             this.Btn_Example5.Name = "Btn_Example5";
             this.Btn_Example5.Size = new System.Drawing.Size(75, 23);
             this.Btn_Example5.TabIndex = 4;
@@ -89,7 +90,7 @@
             // 
             // Btn_Example6
             // 
-            this.Btn_Example6.Location = new System.Drawing.Point(142, 127);
+            this.Btn_Example6.Location = new System.Drawing.Point(171, 127);
             this.Btn_Example6.Name = "Btn_Example6";
             this.Btn_Example6.Size = new System.Drawing.Size(75, 23);
             this.Btn_Example6.TabIndex = 5;
@@ -101,17 +102,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(129, 187);
+            this.label1.Location = new System.Drawing.Point(173, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Developed by Gnomeus";
             // 
+            // LinkLbl_SeeDocumentation
+            // 
+            this.LinkLbl_SeeDocumentation.AutoSize = true;
+            this.LinkLbl_SeeDocumentation.Location = new System.Drawing.Point(63, 173);
+            this.LinkLbl_SeeDocumentation.Name = "LinkLbl_SeeDocumentation";
+            this.LinkLbl_SeeDocumentation.Size = new System.Drawing.Size(176, 13);
+            this.LinkLbl_SeeDocumentation.TabIndex = 7;
+            this.LinkLbl_SeeDocumentation.TabStop = true;
+            this.LinkLbl_SeeDocumentation.Text = "See Online Project Documentation!!";
+            this.LinkLbl_SeeDocumentation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLbl_SeeDocumentationClicked);
+            // 
             // TPLBasics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 236);
+            this.ClientSize = new System.Drawing.Size(315, 236);
+            this.Controls.Add(this.LinkLbl_SeeDocumentation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_Example6);
             this.Controls.Add(this.Btn_Example5);
@@ -135,6 +148,7 @@
         private System.Windows.Forms.Button Btn_Example5;
         private System.Windows.Forms.Button Btn_Example6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel LinkLbl_SeeDocumentation;
     }
 }
 

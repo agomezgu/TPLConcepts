@@ -13,6 +13,7 @@
 #region Dependencies
 
 using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -186,8 +187,15 @@ namespace ThreadingExamples
             });
         }
 
+
+
         #endregion
 
-        
+     
+
+        private void LinkLbl_SeeDocumentationClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://agomezgu.wixsite.com/soeasy");
+        }
     }
 }
