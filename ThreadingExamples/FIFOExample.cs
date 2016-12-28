@@ -40,5 +40,10 @@ namespace ThreadingExamples
             }
             _queueManager.AddItems(numList);
         }
+
+        private void Btn_StopLoop_Click(object sender, EventArgs e)
+        {
+            _queueManager.StopLoop();
+        }
     }
 }

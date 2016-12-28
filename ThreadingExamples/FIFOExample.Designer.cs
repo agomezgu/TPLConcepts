@@ -32,11 +32,12 @@
             this.Btn_AddItems = new System.Windows.Forms.Button();
             this.Btn_GenException = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_StopLoop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnStartLoop
             // 
-            this.BtnStartLoop.Location = new System.Drawing.Point(56, 12);
+            this.BtnStartLoop.Location = new System.Drawing.Point(56, 23);
             this.BtnStartLoop.Name = "BtnStartLoop";
             this.BtnStartLoop.Size = new System.Drawing.Size(120, 23);
             this.BtnStartLoop.TabIndex = 0;
@@ -56,7 +57,7 @@
             // 
             // Btn_GenException
             // 
-            this.Btn_GenException.Location = new System.Drawing.Point(58, 93);
+            this.Btn_GenException.Location = new System.Drawing.Point(58, 81);
             this.Btn_GenException.Name = "Btn_GenException";
             this.Btn_GenException.Size = new System.Drawing.Size(120, 23);
             this.Btn_GenException.TabIndex = 2;
@@ -74,11 +75,22 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Developed by Gnomeus";
             // 
+            // Btn_StopLoop
+            // 
+            this.Btn_StopLoop.Location = new System.Drawing.Point(56, 110);
+            this.Btn_StopLoop.Name = "Btn_StopLoop";
+            this.Btn_StopLoop.Size = new System.Drawing.Size(120, 23);
+            this.Btn_StopLoop.TabIndex = 8;
+            this.Btn_StopLoop.Text = "Stop Loop";
+            this.Btn_StopLoop.UseVisualStyleBackColor = true;
+            this.Btn_StopLoop.Click += new System.EventHandler(this.Btn_StopLoop_Click);
+            // 
             // FifoExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(226, 202);
+            this.Controls.Add(this.Btn_StopLoop);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_GenException);
             this.Controls.Add(this.Btn_AddItems);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button Btn_AddItems;
         private System.Windows.Forms.Button Btn_GenException;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Btn_StopLoop;
     }
 }

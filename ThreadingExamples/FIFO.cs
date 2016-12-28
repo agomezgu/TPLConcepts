@@ -24,7 +24,7 @@ namespace ThreadingExamples
     public class Fifo
     {
         private const int Delay = 500;
-        private Task _infinieTask;
+        private Task _infiniteTask;
         public int ErrorGenerator=1;
         private BlockingCollection<int> _items;
         private object _objLock;
@@ -41,11 +41,16 @@ namespace ThreadingExamples
             items.ForEach(x=>this._items.Add(x)); 
         }
 
+        public void StopLoop()
+        {
+            this._items.CompleteAdding();
+        }
+
         private async void RunDeQueue()
         {
-            if (this._infinieTask != null && this._infinieTask.Status == TaskStatus.Running) return;
+            if (this._infiniteTask != null && this._infiniteTask.Status == TaskStatus.Running) return;
 
-            this._infinieTask = Task.Factory.StartNew(() =>
+            this._infiniteTask = Task.Factory.StartNew(() =>
             {
                 Console.WriteLine("Start Infinite Loop");
                 while (!_items.IsCompleted)
@@ -57,16 +62,17 @@ namespace ThreadingExamples
                     var item = _items.Take();
                     ComplexOperation(item);
                 }
+                Console.WriteLine("End Infinite Loop");
             });
             try
             {
-                await this._infinieTask;
+                await this._infiniteTask;
             }
             catch (Exception xx)
             {
-                Console.WriteLine("Handled Exception -'{0}' , Task State \"{1}\" ", xx.Message, this._infinieTask.Status);
+                Console.WriteLine("Handled Exception -'{0}' , Task State \"{1}\" ", xx.Message, this._infiniteTask.Status);
                 RunDeQueue();
-                Console.WriteLine("Restart Infinite Loop , Task State \"{0}\" ", this._infinieTask.Status);
+                Console.WriteLine("Restart Infinite Loop , Task State \"{0}\" ", this._infiniteTask.Status);
             }
         }
 
