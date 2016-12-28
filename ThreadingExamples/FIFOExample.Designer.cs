@@ -36,7 +36,7 @@
             // 
             // BtnStartLoop
             // 
-            this.BtnStartLoop.Location = new System.Drawing.Point(58, 24);
+            this.BtnStartLoop.Location = new System.Drawing.Point(56, 12);
             this.BtnStartLoop.Name = "BtnStartLoop";
             this.BtnStartLoop.Size = new System.Drawing.Size(120, 23);
             this.BtnStartLoop.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // Btn_AddItems
             // 
-            this.Btn_AddItems.Location = new System.Drawing.Point(58, 64);
+            this.Btn_AddItems.Location = new System.Drawing.Point(56, 52);
             this.Btn_AddItems.Name = "Btn_AddItems";
             this.Btn_AddItems.Size = new System.Drawing.Size(120, 23);
             this.Btn_AddItems.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // Btn_GenException
             // 
-            this.Btn_GenException.Location = new System.Drawing.Point(58, 104);
+            this.Btn_GenException.Location = new System.Drawing.Point(58, 93);
             this.Btn_GenException.Name = "Btn_GenException";
             this.Btn_GenException.Size = new System.Drawing.Size(120, 23);
             this.Btn_GenException.TabIndex = 2;
@@ -74,7 +74,7 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Developed by Gnomeus";
             // 
-            // FIFOExample
+            // FifoExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
