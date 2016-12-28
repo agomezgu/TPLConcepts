@@ -1,6 +1,6 @@
 ﻿namespace ThreadingExamples
 {
-    partial class FIFOExample
+    partial class FifoExample
     {
         /// <summary>
         /// Required designer variable.
@@ -83,7 +83,7 @@
             this.Controls.Add(this.Btn_GenException);
             this.Controls.Add(this.Btn_AddItems);
             this.Controls.Add(this.BtnStartLoop);
-            this.Name = "FIFOExample";
+            this.Name = "FifoExample";
             this.Text = "FIFOExample";
             this.ResumeLayout(false);
             this.PerformLayout();

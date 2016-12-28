@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace ThreadingExamples
 {
-    public partial class FIFOExample : Form
+    public partial class FifoExample : Form
     {
-        private Fifo QueueManager;
-        public FIFOExample()
+        private Fifo _queueManager;
+        public FifoExample()
         {
             InitializeComponent();
         }
@@ -16,29 +16,29 @@ namespace ThreadingExamples
         private void Btn_FIFO_Click(object sender, EventArgs e)
         {
             //Instantiate object an run dequeue Task
-            QueueManager = new Fifo();
+            _queueManager = new Fifo();
         }
 
         private void Btn_AddItems_Click(object sender, EventArgs e)
         {
-            QueueManager.ErrorGenerator = 1;
+            _queueManager.ErrorGenerator = 1;
                var numList=new List<int>();
             for (var i = 0; i < 10; i++)
             {
                 numList.Add(i);
             }
-            QueueManager.AddItems(numList);
+            _queueManager.AddItems(numList);
         }
 
         private void Btn_GenException_Click(object sender, EventArgs e)
         {
-            QueueManager.ErrorGenerator = 0;
+            _queueManager.ErrorGenerator = 0;
             var numList = new List<int>();
             for (var i = 0; i < 10; i++)
             {
                 numList.Add(i);
             }
-            QueueManager.AddItems(numList);
+            _queueManager.AddItems(numList);
         }
     }
 }
