@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace ThreadingExamples
@@ -44,6 +45,13 @@ namespace ThreadingExamples
         private void Btn_StopLoop_Click(object sender, EventArgs e)
         {
             _queueManager.StopLoop();
+        }
+
+        private void LinkLbl_SeeDocumentation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            Process.Start("http://agomezgu.wixsite.com/soeasy");
+
         }
     }
 }
