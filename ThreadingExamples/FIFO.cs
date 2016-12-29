@@ -27,7 +27,10 @@ namespace ThreadingExamples
         private Task _infiniteTask;
         public int ErrorGenerator=1;
         private BlockingCollection<int> _items;
-        private object _objLock;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly object _objLock;
 
         public Fifo()
         {
