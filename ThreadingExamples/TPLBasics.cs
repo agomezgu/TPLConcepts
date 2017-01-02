@@ -65,7 +65,6 @@ namespace ThreadingExamples
             var c = RunLongTaskWithFactory("3");
             Console.WriteLine("End Execution!!!");
         }
-
         /// <summary>
         /// Here you execute async task , and raise an error in task action.
         /// when you generate an exception in a task , all exceptions are added in Exception.InnerException propertie
@@ -154,14 +153,13 @@ namespace ThreadingExamples
         private async Task RunLongTask(string NameThread)
         {
             
-            Console.WriteLine(Thread.CurrentContext.ContextID);
-            
             for (var i = 0; i < 4; i++)
             {
                 await Task.Delay(5000);
                 Console.WriteLine("Executing Method..." + NameThread);
             }
-          
+
+            Console.WriteLine("End Async Method..." + NameThread);
         }
 
         /// <summary>
@@ -261,8 +259,7 @@ namespace ThreadingExamples
         }
         
         #endregion
-
-
+        
         #region others
         private void LinkLbl_SeeDocumentationClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
