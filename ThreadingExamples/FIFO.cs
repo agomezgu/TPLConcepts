@@ -38,10 +38,16 @@ namespace ThreadingExamples
         /// </summary>
         private readonly object _objLock;
 
-        public Fifo()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="startloop">If true , start infinite loop</param>
+        public Fifo(bool startloop)
         {
             _items = new BlockingCollection<int>();
             _objLock = new object();
+
+            if(startloop)
             RunDeQueue();
         }
 
@@ -49,6 +55,31 @@ namespace ThreadingExamples
         {
             items.ForEach(x=>this._items.Add(x)); 
         }
+
+        /// <summary>
+        /// Add item to Queue and run async action to Dequeue
+        /// </summary>
+        /// <param name="item"></param>
+        public void ProcessItem(int item)
+        {
+            Console.WriteLine("Added Item at time {0}", DateTime.Now.ToString("O"));
+            this._items.Add(item);
+
+            //Hey!!! There isn't Await 
+            ComplexOperationAsync();
+        }
+
+        /// <summary>
+        /// Simulate complex operation in your software
+        /// </summary>
+        private async Task ComplexOperationAsync()
+        {
+            Console.WriteLine("Start Complex Operation");
+            var item = _items.Take();
+            await Task.Delay(item);
+            Console.WriteLine("Finish Task {0} hour :{1}", item, DateTime.Now.ToString("O"));
+        }
+
 
         /// <summary>
         /// Mark Block Collection as Completed to stop infinite loop

@@ -21,7 +21,7 @@ namespace ThreadingExamples
         private void Btn_FIFO_Click(object sender, EventArgs e)
         {
             //Instantiate object an run dequeue Task
-            _queueManager = new Fifo();
+            _queueManager = new Fifo(true);
         }
 
         /// <summary>
@@ -72,6 +72,20 @@ namespace ThreadingExamples
 
             Process.Start("http://agomezgu.wixsite.com/soeasy");
 
+        }
+
+        /// <summary>
+        /// Here you can click too much times and it will generate an asincronous action for each one
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void Btn_DequeWithAsincTask_Click(object sender, EventArgs e)
+        {
+            if(_queueManager==null)
+                _queueManager= new Fifo(false);
+
+            // This Number will generate a 10 seconds delay
+            _queueManager.ProcessItem(10000);
         }
     }
 }

@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_StopLoop = new System.Windows.Forms.Button();
             this.LinkLbl_SeeDocumentation = new System.Windows.Forms.LinkLabel();
+            this.Btn_DequeWithAsincTask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnStartLoop
@@ -70,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 212);
+            this.label1.Location = new System.Drawing.Point(110, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 7;
@@ -89,7 +90,7 @@
             // LinkLbl_SeeDocumentation
             // 
             this.LinkLbl_SeeDocumentation.AutoSize = true;
-            this.LinkLbl_SeeDocumentation.Location = new System.Drawing.Point(55, 165);
+            this.LinkLbl_SeeDocumentation.Location = new System.Drawing.Point(55, 227);
             this.LinkLbl_SeeDocumentation.Name = "LinkLbl_SeeDocumentation";
             this.LinkLbl_SeeDocumentation.Size = new System.Drawing.Size(176, 13);
             this.LinkLbl_SeeDocumentation.TabIndex = 9;
@@ -97,11 +98,22 @@
             this.LinkLbl_SeeDocumentation.Text = "See Online Project Documentation!!";
             this.LinkLbl_SeeDocumentation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLbl_SeeDocumentation_LinkClicked);
             // 
+            // Btn_DequeWithAsincTask
+            // 
+            this.Btn_DequeWithAsincTask.Location = new System.Drawing.Point(58, 172);
+            this.Btn_DequeWithAsincTask.Name = "Btn_DequeWithAsincTask";
+            this.Btn_DequeWithAsincTask.Size = new System.Drawing.Size(120, 23);
+            this.Btn_DequeWithAsincTask.TabIndex = 10;
+            this.Btn_DequeWithAsincTask.Text = "Using Async Task";
+            this.Btn_DequeWithAsincTask.UseVisualStyleBackColor = true;
+            this.Btn_DequeWithAsincTask.Click += new System.EventHandler(this.Btn_DequeWithAsincTask_Click);
+            // 
             // FifoExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 234);
+            this.ClientSize = new System.Drawing.Size(243, 282);
+            this.Controls.Add(this.Btn_DequeWithAsincTask);
             this.Controls.Add(this.LinkLbl_SeeDocumentation);
             this.Controls.Add(this.Btn_StopLoop);
             this.Controls.Add(this.label1);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_StopLoop;
         private System.Windows.Forms.LinkLabel LinkLbl_SeeDocumentation;
+        private System.Windows.Forms.Button Btn_DequeWithAsincTask;
     }
 }
