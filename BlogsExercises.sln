@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingExamples", "ThreadingExamples\ThreadingExamples.csproj", "{F2E5177A-B8EE-4393-885C-4D374B38F877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicConcepts", "BasicConcepts\BasicConcepts.csproj", "{6A437995-E631-444E-AEA5-E402EA80F82E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{F2E5177A-B8EE-4393-885C-4D374B38F877}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E5177A-B8EE-4393-885C-4D374B38F877}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E5177A-B8EE-4393-885C-4D374B38F877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A437995-E631-444E-AEA5-E402EA80F82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A437995-E631-444E-AEA5-E402EA80F82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A437995-E631-444E-AEA5-E402EA80F82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A437995-E631-444E-AEA5-E402EA80F82E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
