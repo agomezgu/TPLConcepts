@@ -60,13 +60,14 @@ namespace ThreadingExamples
         /// Add item to Queue and run async action to Dequeue
         /// </summary>
         /// <param name="item"></param>
-        public void ProcessItem(int item)
+        public async void ProcessItem(int item)
         {
             Console.WriteLine("Added Item at time {0}", DateTime.Now.ToString("O"));
             this._items.Add(item);
 
-            //Hey!!! There isn't Await 
-            ComplexOperationAsync();
+            var asynTask = ComplexOperationAsync();
+            //Here you can control Task Result
+            await asynTask;
         }
 
         /// <summary>
@@ -76,6 +77,7 @@ namespace ThreadingExamples
         {
             Console.WriteLine("Start Complex Operation");
             var item = _items.Take();
+
             await Task.Delay(item);
             Console.WriteLine("Finish Task {0} hour :{1}", item, DateTime.Now.ToString("O"));
         }
